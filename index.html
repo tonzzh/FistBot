@@ -41,6 +41,7 @@
     </noscript>
     <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-subids async defer></script>
     <!-- Facebook Pixel Code -->
+    <!-- Facebook Pixel Code (Lazy Load) -->
     <script>
         !function (f, b, e, v, n, t, s) {
             if (f.fbq) return; n = f.fbq = function () {
@@ -48,17 +49,37 @@
                     n.callMethod.apply(n, arguments) : n.queue.push(arguments)
             };
             if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
-            n.queue = []; t = b.createElement(e); t.async = !0;
-            t.src = v; s = b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t, s)
+            n.queue = [];
+
+            // Lazy Load Logic
+            function loadPixel() {
+                if (n.scriptLoaded) return;
+                n.scriptLoaded = true;
+                t = b.createElement(e); t.async = !0;
+                t.src = v; s = b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t, s)
+            }
+
+            var triggered = false;
+            function trigger() {
+                if (triggered) return;
+                triggered = true;
+                loadPixel();
+            }
+
+            setTimeout(trigger, 4000); // Fallback after 4s
+            ['mouseover', 'scroll', 'touchstart', 'click'].forEach(function (ev) {
+                window.addEventListener(ev, trigger, { once: true, passive: true });
+            });
+
         }(window, document, 'script',
             'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '517480377423017');
+        fbq('init', '1644080239859029');
         fbq('track', 'PageView');
     </script>
     <noscript>
         <img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=517480377423017&ev=PageView&noscript=1" />
+            src="https://www.facebook.com/tr?id=1644080239859029&ev=PageView&noscript=1" />
     </noscript>
     <!-- End Facebook Pixel Code -->
     <style>
@@ -1257,7 +1278,7 @@
                         </ul>
 
                         <div style="margin: 30px 0;">
-                            <div class="price-tag">R$ 17,00</div>
+                            <div class="price-tag">R$ 10,00</div>
                         </div>
 
                         <a href="https://pay.hotmart.com/P103075909E?off=hmmf362l&checkoutMode=10" class="btn-glow"
