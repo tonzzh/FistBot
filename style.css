@@ -1850,3 +1850,39 @@ html {
         word-wrap: break-word;
     }
 }
+/* Aggressive Fix for Plans Section Mobile Size */
+@media (max-width: 768px) {
+
+    /* 1. Maximize Card Width */
+    .elementor-element-2f5101f7,
+    .elementor-element-3cb5e0e9,
+    .elementor-element-f1e621 {
+        width: 95% !important;
+        max-width: 95% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* 2. Larger Plan Titles (Pacote Iniciante) */
+    .elementor-widget-heading h3.elementor-heading-title {
+        font-size: 28px !important;
+        line-height: 1.2 !important;
+    }
+
+    /* 3. Larger List Text (Features) */
+    .elementor-icon-list-text {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+    }
+
+    /* 4. Ensure Icons match text size */
+    .elementor-icon-list-icon svg {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    /* 5. Button Text Size */
+    .elementor-button .elementor-button-text {
+        font-size: 18px !important;
+    }
+}
