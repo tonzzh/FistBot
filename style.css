@@ -1770,3 +1770,13 @@ html {
         height: 26px;
     }
 }
+
+
+/* Centering Buy Button on Desktop */
+@media (min-width: 768px) {
+    .elementor-element-1bbb5f9a {
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+}
