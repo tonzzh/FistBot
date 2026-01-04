@@ -1811,3 +1811,42 @@ html {
     }
 }
 
+/* Fix for Plans Section Mobile Size to match Image */
+@media (max-width: 768px) {
+
+    /* Increase padding for cards */
+    .e-con.e-child,
+    .elementor-widget-icon-box .elementor-icon-box-wrapper,
+    .elementor-element-2f5101f7,
+    /* Specific ID for card 1 */
+    .elementor-element-3cb5e0e9,
+    /* Specific ID for card 2 */
+    .elementor-element-f1e621,
+    /* Specific ID for card 3 */
+    .card {
+        padding: 32px 24px !important;
+        /* Larger top/bottom padding, consistent side padding */
+    }
+
+    /* Increase Price Font Size */
+    .elementor-element-c17f792 .elementor-heading-title,
+    .elementor-element-1e5f57d7 .elementor-heading-title,
+    .elementor-element-4eb22fa1 .elementor-heading-title {
+        font-size: 34px !important;
+        /* Larger */
+        font-weight: 800 !important;
+    }
+
+    /* Adjust "Mais Vendido" Badge */
+    .elementor-element-2febb08d {
+        top: -25px !important;
+        /* Pull up slightly more to clear larger padding if needed */
+        margin-bottom: 30px !important;
+        /* More space below */
+    }
+
+    /* Ensure content inside doesn't hit edges */
+    .elementor-heading-title {
+        word-wrap: break-word;
+    }
+}
