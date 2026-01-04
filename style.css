@@ -1780,3 +1780,34 @@ html {
         width: 100% !important;
     }
 }
+
+/* Fix for Carousel White Space and Transitions */
+.testimonial-carousel-3d {
+    background: transparent !important;
+}
+
+.carousel-item-3d {
+    transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1) !important;
+}
+
+.carousel-item-3d[data-position="left"] {
+    transform: translate(-90%, -50%) translateZ(-200px) rotateY(25deg) scale(0.85) !important;
+    opacity: 0.8 !important;
+    filter: blur(1px);
+}
+
+.carousel-item-3d[data-position="right"] {
+    transform: translate(-10%, -50%) translateZ(-200px) rotateY(-25deg) scale(0.85) !important;
+    opacity: 0.8 !important;
+    filter: blur(1px);
+}
+
+@media (max-width: 768px) {
+    .carousel-item-3d[data-position="left"] {
+        transform: translate(-110%, -50%) translateZ(-200px) rotateY(30deg) scale(0.75) !important;
+    }
+    .carousel-item-3d[data-position="right"] {
+        transform: translate(10%, -50%) translateZ(-200px) rotateY(-30deg) scale(0.75) !important;
+    }
+}
+
