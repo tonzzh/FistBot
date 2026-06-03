@@ -564,6 +564,28 @@ svg {
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
   }
+
+  /* Cards da seção "RECEITAS INDICADAS PARA QUEM" no Mobile */
+  .elementor-element-5006b711,
+  .elementor-element-4821588a,
+  .elementor-element-2581baaa,
+  .elementor-element-5440072d {
+    padding: 20px 8px !important;
+    margin: 8px 4px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Parágrafo de texto desses cards no Mobile */
+  .elementor-element-511872fd p,
+  .elementor-element-14841783 p,
+  .elementor-element-3bd470ad p,
+  .elementor-element-2fb40525 p {
+    font-size: clamp(0.78rem, 2.5vw, 0.92rem) !important;
+    line-height: 1.35 !important;
+    text-align: center !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+  }
 }
 
 /* ==========================================================================
