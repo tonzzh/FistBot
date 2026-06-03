@@ -531,11 +531,38 @@ svg {
     justify-content: center !important;
     box-sizing: border-box !important;
     padding: 14px 16px !important;
-    font-size: 0.82rem !important;
+    font-size: clamp(0.7rem, 3vw, 0.82rem) !important;
     white-space: nowrap !important;
   }
   .floating-cta-badge {
     display: none !important;
+  }
+
+  /* Cards da seção "TODAS AS RECEITAS CONTÉM" no Mobile */
+  .elementor-element-4ce1ac1e,
+  .elementor-element-170a8d20,
+  .elementor-element-32061f2e,
+  .elementor-element-8f3bd45,
+  .elementor-element-35053f66,
+  .elementor-element-1d48e941 {
+    padding: 20px 8px !important;
+    margin: 8px 4px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Títulos desses cards no Mobile */
+  .elementor-element-7049702e .elementor-heading-title,
+  .elementor-element-2eb5cff3 .elementor-heading-title,
+  .elementor-element-43de148a .elementor-heading-title,
+  .elementor-element-e0f5290 .elementor-heading-title,
+  .elementor-element-66a5b576 .elementor-heading-title,
+  .elementor-element-4091fd46 .elementor-heading-title {
+    font-size: clamp(0.75rem, 2.5vw, 0.88rem) !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.2px !important;
+    text-align: center !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
   }
 }
 
