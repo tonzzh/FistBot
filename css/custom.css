@@ -531,10 +531,7 @@ svg {
     justify-content: center !important;
     box-sizing: border-box !important;
     padding: 14px 16px !important;
-    font-size: clamp(0.75rem, 3vw, 0.85rem) !important;
-    white-space: normal !important;
-    text-align: center !important;
-    flex-wrap: wrap !important;
+    white-space: nowrap !important;
   }
   .floating-cta-badge {
     display: none !important;
@@ -587,6 +584,12 @@ svg {
     text-align: center !important;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
+  }
+
+  /* Texto dentro do botão flutuante no Mobile (forçado em uma linha) */
+  .floating-cta-text {
+    font-size: clamp(0.68rem, 2.7vw, 0.82rem) !important;
+    white-space: nowrap !important;
   }
 }
 
