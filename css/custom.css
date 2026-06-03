@@ -531,8 +531,10 @@ svg {
     justify-content: center !important;
     box-sizing: border-box !important;
     padding: 14px 16px !important;
-    font-size: clamp(0.7rem, 3vw, 0.82rem) !important;
-    white-space: nowrap !important;
+    font-size: clamp(0.75rem, 3vw, 0.85rem) !important;
+    white-space: normal !important;
+    text-align: center !important;
+    flex-wrap: wrap !important;
   }
   .floating-cta-badge {
     display: none !important;
