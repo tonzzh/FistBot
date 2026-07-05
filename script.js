@@ -180,6 +180,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Meta Pixel Custom Event Tracking ---
+    
+    // 1. Rastrear cliques no WhatsApp (Event: Contact)
+    const whatsappBtn = document.querySelector('.whatsapp-float');
+    if (whatsappBtn) {
+        whatsappBtn.addEventListener('click', () => {
+            if (typeof fbq === 'function') {
+                fbq('track', 'Contact', {
+                    content_name: 'Suporte WhatsApp',
+                    source: 'Floating Button'
+                });
+            }
+        });
+    }
+
     // --- Dynamic Copyright Year ---
     const yearEl = document.getElementById('current-year');
     if (yearEl) {
