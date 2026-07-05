@@ -237,8 +237,8 @@ p {
 /* Accessibility: High contrast badges on light backgrounds */
 .testimonials .badge,
 .guarantee-section .badge {
-    background-color: rgba(180, 83, 9, 0.12);
-    color: #b45309;
+    background-color: rgba(120, 53, 15, 0.1);
+    color: #78350f;
 }
 
 .btn-primary {
