@@ -234,6 +234,13 @@ p {
     display: inline-block;
 }
 
+/* Accessibility: High contrast badges on light backgrounds */
+.testimonials .badge,
+.guarantee-section .badge {
+    background-color: rgba(180, 83, 9, 0.12);
+    color: #b45309;
+}
+
 .btn-primary {
     background: var(--primary-gradient);
     color: var(--secondary-color);
@@ -961,7 +968,7 @@ p {
     background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
 }
 
-.author-info h4 {
+.author-info h3 {
     font-size: 0.95rem;
     font-weight: 600;
     margin-bottom: 0.15rem;
