@@ -116,10 +116,10 @@ document.addEventListener('DOMContentLoaded', () => {
         return false;
     };
 
-    // Load Meta Pixel tracking script dynamically
+    // Load tracking scripts dynamically
     const loadTrackingScripts = () => {
-        // Pixel is loaded statically in index.html as per standard installation.
-        console.log('Meta Pixel is loaded statically in index.html');
+        // Pixel/tracking is loaded statically in index.html as per standard installation.
+        console.log('Tracking scripts are loaded statically in index.html');
     };
 
     const cookieBanner = document.getElementById('cookie-banner');
@@ -176,21 +176,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             } catch (e) {
                 console.error('Error clearing cookies:', e);
-            }
-        });
-    }
-
-    // --- Meta Pixel Custom Event Tracking ---
-    
-    // 1. Rastrear cliques no WhatsApp (Event: Contact)
-    const whatsappBtn = document.querySelector('.whatsapp-float');
-    if (whatsappBtn) {
-        whatsappBtn.addEventListener('click', () => {
-            if (typeof fbq === 'function') {
-                fbq('track', 'Contact', {
-                    content_name: 'Suporte WhatsApp',
-                    source: 'Floating Button'
-                });
             }
         });
     }
